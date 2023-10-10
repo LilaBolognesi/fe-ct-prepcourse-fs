@@ -8,7 +8,7 @@ function crearGato(nombre, edad) {
    // Retornar el objeto.
    // Tu código:
 return gato = {
-      nombre: nombre ,
+      nombre: nombre,
       edad: edad,
       meow: function (){
          return "Meow!"} 
@@ -32,10 +32,11 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
- objeto[propiedad]=null;
+   //recibimos una variable, no el NOMBRE de la PROPIEDAD
+ objeto[propiedad]=null; //dentro de la variable tenemos la propiedad
    return objeto;
 }
-
+  
 function invocarMetodo(objeto, metodo) {
    // El parámetro "metodo" es un string que coincide con el nombre de una propiedad del objeto recibido.
    // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
@@ -53,9 +54,9 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    // Debes multiplicar este número por 5 y retornar el resultado.
    // Tu código:
 
- 
-  var resultado = objetoMisterioso.numeroMisterioso * 5;
-   return resultado;
+ return objetoMisterioso.numeroMisterioso * 5;
+//   var resultado = objetoMisterioso.numeroMisterioso * 5;
+//    return resultado;
 }
 
 function eliminarPropiedad(objeto, propiedad) {
@@ -70,6 +71,8 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+   //llamado al objeto, su propiedad y negación estricta
+   // a través de un CONDISIONAL realizamos dos preguntas
 if (objetoUsuario.email !== null && objetoUsuario.email !== undefined){
    return true
 }
@@ -96,7 +99,7 @@ function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-
+   // a travez de un condisional le pregunto al objeto si en su propiedad password es estrictamente igual a password
    if (objetoUsuario.password === password){
       return true;
    } else {
@@ -165,10 +168,17 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-   objetoProducto.calcularPrecioDescuento= function(){
-      var descuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
-      var precioFinal= objetoProducto.precio - descuento;
-      return precioFinal;
+
+   // objetoProducto.calcularPrecioDescuento= function(){
+   //    var descuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
+   //    var precioFinal= objetoProducto.precio - descuento;
+   //    return precioFinal;
+   // }
+   // return objetoProducto;
+
+   objetoProducto ['calcularPrecioDescuento'] = function (){
+      return this.precio - (this.precio * this.porcentajeDeDescuento);
+      
    }
    return objetoProducto;
 }
