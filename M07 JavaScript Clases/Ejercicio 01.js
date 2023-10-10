@@ -18,7 +18,7 @@ function crearUsuario() {
       this.password = password;
       }
      saludar () {
-         return  'Hola, mi nombre es ' + this.nombre
+         return  'Hola, mi nombre es ' + this.nombre;
         
       }
        
@@ -44,14 +44,19 @@ function agregarStringInvertida() {
    // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
    // El método debe llamarse "reverse".
    // [PISTA]: necesitarás utilizar el objeto "this".
-   String.prototype.reverse = function (){
-      var agregarStringInvertida = "";
 
-      for( var i = this.length -1; i >= 0; i--){
-         agregarStringInvertida += this.charAt(i)
-      }
-      return agregarStringInvertida;
-   }
+   // String.prototype.reverse = function (){
+   //    var agregarStringInvertida = "";
+
+   //    for( var i = this.length -1; i >= 0; i--){
+   //       agregarStringInvertida += this.charAt(i)
+   //    }
+   //    return agregarStringInvertida;
+   // }
+
+   String.prototype.reverse = function(){
+      return this.split("").reverse().join("");
+   };
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
