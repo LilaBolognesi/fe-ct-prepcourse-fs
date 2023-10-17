@@ -6,6 +6,9 @@ function mayuscula(nombre) {
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
  
+   //tomar la posicion 1 del string que me pasan (charAt(0))
+   //transformar en Mayuscula con e método toUpperCase()
+   //concatenar el string sin la posicion 1 (slice(1))
 return nombre.charAt(0).toUpperCase() + nombre.slice(1);
  
 }
@@ -24,7 +27,7 @@ function operacionMatematica(num1, num2, cb) {
    // Tu código:
    // var suma = num1 + num2;
    // return cb(suma);
-   return cb(num1 + num2);
+   return cb(num1,num2);
 }
 
 function sumarArray(arrayOfNumbers, cb) {
@@ -33,6 +36,7 @@ function sumarArray(arrayOfNumbers, cb) {
    // Este resultado debes pasárselo como argumento al callback recibido.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
+   
    //Definimos la variable suma
      var suma = 0;
 //   Acumula toda la suma de los valores del array
@@ -70,20 +74,25 @@ function map(array, cb) {
    // Tu código:
   
    //inicializamos array vacio para ir guaradando cada resultado
-   var arreglo = [];
+   var newArray = [];
    //recorremos arreglo
    for (var i =0; i < array.length; i++){
-      arreglo.push(cb(array[i]));
+      newArray.push(cb(array[i]));
    }
-   return arreglo;
+   return newArray;
 }
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
+
+   //inicializamos en una variable que va a ser un arreglo vacio  para ir pussheando todos los elementos que comiencen con la letra "a"
    var letraA=[];
+
+   
    for (var i =0; i < arrayOfStrings.length; i++){
+      //condisional para identificar la primera letra del elemento
       if(arrayOfStrings[i][0]==="a"){
          letraA.push(arrayOfStrings[i])
       }
