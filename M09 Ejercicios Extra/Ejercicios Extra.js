@@ -179,16 +179,16 @@ function buscoInterseccion(array1, array2) {
  
  // for tradicional
  
- /* let array3 = [];
+ /* let comunElemento = [];
     for (let i = 0; i < array1.length; i++) {
        for (let j = 0; j < array2.length; j++) {
           if (array1[i] === array2[j]) {
-             array3.push(array1[i]);
+             comunElemento.push(array1[i]);
           }
        }
        
     }
-    return array3;
+    return comunElemento;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

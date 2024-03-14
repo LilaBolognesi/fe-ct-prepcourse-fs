@@ -1,4 +1,4 @@
-![HenryLogo](./Assets//logoBannerHenry.png)
+![HenryLogo](./assets/logoBannerHenry.png)
 
 # **🧑‍💻 PREP COURSE | HENRY 👩‍💻**
 
@@ -60,13 +60,11 @@ Para ejecutar los tests de las homeworks debes:
     npm test
 ```
 
--  Si quieres ejecutar los tests de una homework específica escribe en tu terminal:
+-  Si quieres ejecutar un test específico de una clase, deberás ingresar a la carpeta **`test`** desde tu terminal. Allí podrás ejecutras un test de forma individual con el comando:
 
 ```bash
-    npm test XX
+    npm run jest [nombreDelArchivo]
 ```
-
-... donde "_**XX**_" es el número de la homework.
 
 ---
 
@@ -100,5 +98,3 @@ git push
 ```
 
 Recuerda que todos estos comandos son necesarios. Si tienes alguna duda, ¡te invitamos a que repases estos comandos en el Prep Course!
-
-Encontrarás toda la explicación dentro de: "**`Módulo 2 | Creación de repositorio y primer commit`**".
